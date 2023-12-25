@@ -1,22 +1,22 @@
 /*
-Q.1 Write a Program to find the length of a string using a Pointer.
+Q.1 Write a program to find out length of string using pointer.
 Output:
-Enter any string : surat
-String length is : 5
+Enter any String: Morris
+
+The length of string is : 6
 */
-
 #include<stdio.h>
-#include<string.h>
-
- main(){
-	int i;
+void main(){
 	char a[100];
-	int *ptr;
+	int len=0;
+	char *ptr=a;
 	
-	printf("Enter any string : ");
+	printf("Enter any String: ");
 	gets(a);
 	
-	ptr=&a;
-	
-	printf("String length is : %d",strlen(a));
+	while(*ptr != NULL){
+		len++;
+		ptr++;
+	}
+	printf("\nThe length of string is : %d",len);
 }
